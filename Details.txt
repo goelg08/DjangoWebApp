@@ -1,0 +1,15 @@
+
+pip install virtualenvwrapper-win
+
+mkvirtualenv test
+
+python manage.py runserver
+
+--To create app
+python manage.py startapp calc
+
+--We should create template folder for Django templates to create html template with Dynamic content - DTL (Django Template Language)
+We have base.html for css, color changes etc
+Also have home.html for dynamic content. 
+Helps in learning how to include external files.
+
