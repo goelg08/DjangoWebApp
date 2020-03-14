@@ -13,3 +13,6 @@ We have base.html for css, color changes etc
 Also have home.html for dynamic content. 
 Helps in learning how to include external files.
 
+python manage.py collectstatic - to tell Django to create folder and refer to static folder
+Also make changes in settings.py file
+Also make changes in .html file path to css etc
