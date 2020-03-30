@@ -16,3 +16,10 @@ Helps in learning how to include external files.
 python manage.py collectstatic - to tell Django to create folder and refer to static folder
 Also make changes in settings.py file
 Also make changes in .html file path to css etc
+
+
+python manage.py makemigrations
+python manage.py sqlmigrate AdminFile 0001
+python manage.py migrate
+
+python manage.py createsuperuser - create login for django default admin page
