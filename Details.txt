@@ -23,3 +23,7 @@ python manage.py sqlmigrate AdminFile 0001
 python manage.py migrate
 
 python manage.py createsuperuser - create login for django default admin page
+
+if you want to create a page to make entry in DB from Django Admin page add code in admin.py Page
+
+ORM - For Users ORM is already present in Django framework
