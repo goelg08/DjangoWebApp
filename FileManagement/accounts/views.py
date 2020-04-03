@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.core.files.storage import FileSystemStorage
+
 # Create your views here.
 def login(request):
 	if request.method == 'POST':
@@ -11,7 +13,7 @@ def login(request):
 		
 		if user is not None:
 			auth.login(request, user)
-			return redirect("/")
+			return redirect("upload")
 		else:
 			messages.info(request,"Invalid credentials")
 			return redirect('login')
@@ -57,3 +59,11 @@ def register(request):
 		return redirect('/')
 	else:
 		return render(request, 'register.html')
+
+		
+def upload(request):
+	if request.method == 'POST':
+		uploaded_file = request.FILES['document']
+		fs = FileSystemStorage()
+		fs.save(uploaded_file.name, uploaded_file)
+	return render(request,'upload.html')
